@@ -1,0 +1,6 @@
+Model: Logistic Regression
+Selected threshold: 0.30
+Test Recall: 0.751
+Test Precision: 0.525
+Test F1-score: 0.618
+Test ROC-AUC: 0.842

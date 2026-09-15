@@ -34,3 +34,7 @@ dist/
 
 # Generated prediction output
 data/processed/churn_predictions.csv
+
+# Experimental / tuning artifacts
+models/best_rf_model.pkl
+models/rf_grid_search_result.pkl

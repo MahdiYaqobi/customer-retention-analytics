@@ -27,9 +27,7 @@ Customer-retention-analytics/
 ├── models/
 │   ├── preprocessor.joblib       # Fitted ColumnTransformer (scaling + encoding)
 │   ├── churn_model_logreg.pkl    # Final trained pipeline (preprocessing + model)
-│   ├── model_metadata.txt        # Selected threshold and final test metrics
-│   ├── best_rf_model.pkl         # Tuned Random Forest (not selected as final model)
-│   └── rf_grid_search_result.pkl # GridSearchCV results from Random Forest tuning
+│   └── model_metadata.txt        # Selected threshold and final test metrics
 ├── notebooks/
 │   ├── 01_data_understanding.ipynb
 │   ├── 02_Exploratory_data_analysis.ipynb
@@ -38,8 +36,6 @@ Customer-retention-analytics/
 │   └── 05_model_training_and_evaluation.ipynb
 ├── src/
 │   └── predict.py                # Inference script: raw customer data → churn prediction
-├── images/
-├── reports/
 └── README.md
 ```
 
@@ -124,7 +120,6 @@ If `--output` is omitted, predictions are written to `data/processed/churn_predi
 - **`models/churn_model_logreg.pkl`** — the complete pipeline used by `predict.py` for preprocessing and Logistic Regression inference.
 - **`models/preprocessor.joblib`** — the standalone preprocessing step used when the pipeline was originally built in notebook `05`. Not called separately at inference time; `churn_model_logreg.pkl` already includes it.
 - **`models/model_metadata.txt`** — records the selected threshold (0.30) and final test metrics for reference.
-- **`models/best_rf_model.pkl`**, **`models/rf_grid_search_result.pkl`** — the tuned Random Forest and its grid search results, kept as a record of the model comparison. Not used in inference.
 
 ## Tech Stack
 
